@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Actualizar datos</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <script  src="cordova.js"></script>
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script
+            src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js">
+        </script>
+    </head>
+    <body>
+
+        <div data-role="page" id="actualizarContrasena">
+
+            <div data-role="header">
+                <table style="width: 100%;">
+                    <tr>
+                        <td><div style="text-align: left;"><h2 >Cerca de TI</h2></div></td>
+                        <td><div  style="text-align: right;"><a href="#add-form" class="ui-btn ui-icon-gear ui-btn-icon-notext  ui-corner-all">Opciones</a></div></td>
+                    </tr>                                                            
+                </table>                                    
+                <div class="ui-grid-solo">
+                    <p id="idNameUserlogin"><img src="../img/avatar.png" class="alineadoTextoImagen" ></p>
+                </div>                
+
+            </div><!-- /header -->
+
+            <div  role="main" class="ui-content">
+                <h1 class="centrado">Cerca de Ti</h1>
+                <form>
+                    <p>
+                        <label for="identificationUpdate">CC.</label>
+                        <input id="identificationUpdate" type="number" name="identificationUpdate">
+                    </p>
+                    <p>
+                        <label for="namesUser"><img src="../img/user.png"/></label>
+                        <input id="namesUser" type="text" name="namesUser" >
+                    </p>
+                    <p>
+                        <label for="surnamesUser"><img src="../img/user.png"/></label>
+                        <input id="surnamesUser" type="text" name="surnamesUser">
+                    </p>
+                    <p>
+                        <label for="emailUser"><img src="../img/correo.png"/></label>
+                        <input id="emailUser" type="email" name="emailUser" >
+                    </p>
+                    <p>
+                        <label for="cellphoneUser">Teléfono</label>
+                        <input id="cellphoneUser" type="number" name="cellphoneUser">
+                    </p>
+                    <p>
+                        <label for="passwordUserUpdate">Contraseña</label>
+                        <input id="passwordUserUpdate" type="password" name="passwordUserUpdate">
+                    </p>  
+                    <p>
+                        <label for="passwordUser2">Confirmar Contraseña</label>
+                        <input id="passwordUser2" type="password" name="passwordUser2">
+                    </p>                                                           
+                </form>             
+            </div><!-- /content -->  
+            <div data-role="panel" data-position="right" data-display="overlay" data-theme="b" id="add-form">
+                <ul data-role="listview" data-theme="a">
+                    <li><a href="registro.html" data-transition="slidedown">Actializar datos</a></li>
+                    <li><a href="../index.html" data-transition="slidedown">Cerrar sesión</a></li>
+                </ul>
+            </div><!-- /panel -->
+            <div  data-role="footer">
+                <div  data-role="navbar">
+                    <ul><li><a onclick="getUserUpdate();" data-icon="check" data-transition="slidedown">Enviar</a></li></ul>
+                </div>
+            </div>
+        </div><!-- /page -->
+
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="../cordova.js"></script>
+        <script type="text/javascript" src="../index.js"></script>
+        <script type="text/javascript" src="../js/funciones.js"></script>
+        <script type="text/javascript" src="../js/login.js"></script>
+        <script type="text/javascript" src="../js/parameters.js"></script>
+        <script type="text/javascript" src="../js/users.js"></script>
+        <script type="text/javascript" src="../js/complaints.js"></script>
+    </body>
+</html>
+
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div data-role="panel" data-position="right" data-display="overlay" data-theme="b" id="add-form">
+            <ul data-role="listview" data-theme="a">
+                <li data-icon="grid"><a onclick="obtenerseguimientoPQR()" href="seguimiento.html"  data-transition="slidedown">Mis denuncias</a></li>
+                <li data-icon="search"><a href="denuncias.html" data-transition="slidedown">Denunciar</a></li>
+                <li data-icon="search"><a href="consultas.html" data-transition="slidedown">Consultar</a></li>
+                <li data-icon="refresh"><a href="registro.html" data-transition="slidedown">Actializar datos</a></li>                    
+                <li data-icon="action"><a onclick="logoutUser()" data-transition="slidedown">Cerrar sesión</a></li>
+            </ul>
+        </div><!-- /panel -->
+
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="../cordova.js"></script>
+        <script type="text/javascript" src="../index.js"></script>
+        <script type="text/javascript" src="../js/funciones.js"></script>
+        <script type="text/javascript" src="../js/login.js"></script>
+        <script type="text/javascript" src="../js/parameters.js"></script>
+        <script type="text/javascript" src="../js/users.js"></script>
+        <script type="text/javascript" src="../js/complaints.js"></script>
+    </body>        
+</html>

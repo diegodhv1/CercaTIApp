@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Denuncias</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="../cordova.js"></script>
+        
+        <link rel="stylesheet" href="../css/estilos.css">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script
+            src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js">
+        </script>        
+    </head>
+    <body>
+
+        <div data-role="page" id="tipo-denuncia">
+
+            <div data-role="header">
+                <table style="width: 100%;">
+                    <tr>
+                        <td><div style="text-align: left;"><h2 >Cerca de TI</h2></div></td>
+                        <td><div  style="text-align: right;"><a href="#add-form" class="ui-btn ui-icon-gear ui-btn-icon-notext  ui-corner-all">Opciones</a></div></td>
+                    </tr>                                                            
+                </table>                                    
+                <div class="ui-grid-solo">
+                    <p id="idNameUserlogin"><img src="../img/avatar.png" class="alineadoTextoImagen" ></p>
+                </div>                
+
+            </div><!-- /header -->
+
+            <div  role="main" class="ui-content">
+                <h1 class="centrado">PQR/Denuncia</h1>
+                <form>
+                    <div class="ui-field-contain">
+                        <label for="sel-subcategoria">Tipo de denuncia</label>                    
+                        <select name="typeComplaint" id="idTypeComplaint" data-native-menu="false">
+                            <option value="1" selected="selected">Seleccione</option>
+                            <option value="CORRUPCION_ADMINISTRATIVA">Corrupción administrativa.</option>
+                            <option value="INFRACCION_ESPACIO_PUBLICO">Uso del espacio público.</option>
+                            <option value="INFRACCION_AMBIENTAL">Infracción ambiental.</option>
+                            <option value="SERVICIO_PUBLICO">Servicios públicos.</option>
+                            <option value="INCIDENTES_AMENAZAS">Incidentes y amenazas de seguridad.</option>
+                        </select>
+                    </div>
+                    <div class="ui-field-contain">
+                        <label for="textinput-3">Asunto:</label>
+                        <input id="idAsunto" type="text" name="textinput-3" placeholder="Asunto">
+                    </div>
+
+                    <div class="ui-field-contain">
+                        <label for="textarea-4">Descripción</label>
+                        <textarea id="idTextArea"  placeholder="Descripción"></textarea>
+                    </div>  
+
+                    <div class="ui-field-contain">                        
+                        <a href="#popupCamera" data-rel="popup" data-position-to="window" data-transition="slidedown" class="ui-btn ui-corner-all ui-shadow ui-icon-camera ui-btn-icon-left ui-btn-a" data-transition="pop">Captura imagen</a>                      
+                    </div>
+                </form>
+                <div id="capturaImg" style="display: none;" class="centrado">                                    
+                </div>              
+                <div id="capturaVideo" style="display: none;" class="centrado">                                    
+                </div>
+                <!--<div class="centrado"> <a href="#datos" data-transition="slideup" rel="external"><img src="../img/next.png"></a></div>-->                
+            </div><!-- /content -->
+            <!-- <div data-role="footer">
+               
+            </div>/footer -->
+            <div  data-role="footer">
+                <div  data-role="navbar">
+                    <ul><li><button onclick="createComplaints();" data-icon="plus" data-transition="slidedown">Crear</button></li></ul>
+                    <ul><li><a onclick="goToPage('principal.html')" data-icon="carat-l" data-transition="slidedown">Regresar</a></li></ul>
+                </div>
+            </div>
+
+            <div data-role="panel" data-position="right" data-display="overlay" data-theme="b" id="add-form">
+                <ul data-role="listview" data-theme="a">
+                    <li data-icon="home"><a onclick="goToPage('principal.html')" data-transition="slidedown">Inicio</a></li>
+                    <li data-icon="grid"><a onclick="goToPage('seguimiento.html')"  data-transition="slidedown">Mis denuncias</a></li>                                      
+                    <li data-icon="search"><a onclick="goToPage('consultas.html')" data-transition="slidedown">Consultar</a></li>
+                    <li data-icon="refresh"><a onclick="goToPage('registro.html')" data-transition="slidedown">Actializar datos</a></li>                    
+                    <li data-icon="action"><a onclick="logoutUser()" data-transition="slidedown">Cerrar sesión</a></li>
+                </ul>
+            </div><!-- /panel -->           
+
+            <div data-role="popup" id="popupCamera" data-theme="a" class="ui-corner-all">
+                <form>
+                    <div style="padding:10px 20px;">
+                                    <h3>Seleccionar opción</h3>                                  
+                        <div class="ui-field-contain">
+                            <label for="seleccionOpcionCamera">Tipo de denuncia</label>                    
+                            <button  class="ui-btn" onclick="captureImage()">Foto</button><br>
+                            <button  class="ui-btn" onclick="captureVideo();" >Video</button><br>                                                                                                                                                                    
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div><!-- /page -->
+        <script type="text/javascript" src="../js/bootstrap.js"></script>                   
+        <script type="text/javascript" src="../js/storage.js"></script>  
+        <script type="text/javascript" src="../js/complaints.js"></script>
+        <script type="text/javascript" src="../js/media.js"></script>
+        <script type="text/javascript" src="../js/users.js"></script>        
+        <script type="text/javascript" src="../js/parameters.js"></script>        
+        <script type="text/javascript">
+            function bootstrap(userData){
+                showUserInfo(userData);               
+            }
+        </script>
+    </body>
+</html>
+
+
+

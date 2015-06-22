@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+              
+        <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        
+        <script type="text/javascript" src="js/plugins/LaunchMyApp.js"></script>
+        
+        <script type="text/javascript" src="js/parameters.js"></script>
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <script type="text/javascript" src="js/storage.js"></script>
+        <script type="text/javascript" src="js/login.js"></script> 
+        <script type="text/javascript" src="js/users.js"></script> 
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    </head>
+    <body>
+
+        <div data-role="page" id="index">
+
+            <div data-role="header">
+
+            </div><!-- /header -->
+
+            <div  role="main" class="ui-content">
+                <h1 class="centrado">Cerca de TI</h1>
+                <form id="frmLogin">
+                    <div data-role="fieldcontain">                        
+                        <label for="textinput-1">CC.</label>
+                        <input type="number" required="required" id="cc"  class="cc requerida" name="textinput-1" placeholder="Escriba su cedula">       
+                    </div>
+                    <div data-role="fieldcontain">
+                        <label for="textinput-2">****</label>
+                        <input id="password" type="password" name="textinput-2" placeholder="Escriba su contraseña">                      
+                    </div>
+                </form>                   
+                <p class="acceso"><a href="pages/restablecer.html" data-transition="slidedown" >¿No recuerda sus datos de acceso?</a> </p>
+                <p class="acceso"><a href="pages/registro.html" data-transition="slidedown" >¿Nuevo?</a> </p>                                            
+            </div><!-- /content -->            
+            <!-- <div data-role="footer">
+               
+            </div>/footer -->                     
+            <div  data-role="footer">
+                <div  data-role="navbar">
+                    <ul><li><button onclick="login();" data-icon="check" data-transition="slidedown">Ingresar</button></li></ul>
+                </div>
+            </div>
+        </div><!-- /page -->
+
+    </body>
+</html>  

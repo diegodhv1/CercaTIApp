@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <script  src="/cordova.js"></script>
+        <link rel="stylesheet" href="/css/estilos.css">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script
+            src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js">
+        </script>
+    </head>
+    <body onload="onLoad();">
+
+        <div data-role="page" id="registro">
+
+            <div data-role="header">
+
+            </div><!-- /header -->
+
+            <div role="main"  class="ui-content">
+                <h1 class="centrado">Cerca de Ti</h1>
+
+                <form>
+                    <p>
+                        <label for="identification">CC.</label>
+                        <input id="identification" type="number" name="identification" placeholder="Cedula">
+                    </p>
+                    <p>
+                        <label for="names"><img src="../img/user.png"/></label>
+                        <input id="names" type="text" name="names" placeholder="Nombres">
+                    </p>
+                    <p>
+                        <label for="surnames"><img src="../img/user.png"/></label>
+                        <input id="surnames" type="text" name="surnames" placeholder="Apellidos">
+                    </p>
+                    <p>
+                        <label for="email"><img src="../img/correo.png"/></label>
+                        <input id="email" type="email" name="email" placeholder="Correo">
+                    </p>
+                    <p>
+                        <label for="identification">Teléfono</label>
+                        <input id="cellphone" type="number" name="cellphone" placeholder="Teléfono">
+                    </p>
+                    <p>
+                        <label for="passwordUser">Contraseña</label>
+                        <input id="passwordUser" type="password" name="passwordUser" placeholder="Contraseña">
+                    </p>  
+                    <p>
+                        <label for="password2">Confirmar Contraseña</label>
+                        <input id="password2" type="password" name="password2" placeholder="Confirmar contraseña">
+                    </p>                                                           
+                </form>
+               
+            </div><!-- /content -->
+
+            <div  data-role="footer">
+                <div  data-role="navbar">
+                    <ul><li><button onclick="createUser();" data-icon="check" data-transition="slidedown">Enviar</button></li></ul>                   
+                    <ul><li><button onclick="getUserUpdate();" data-icon="check" data-transition="slidedown">Get</button></li></ul>                   
+                    
+                </div>
+            </div>
+        </div><!-- /page -->
+
+        <script type="text/javascript" src="../js/index.js"></script>
+        <script type="text/javascript" src="../cordova.js"></script>
+        <script type="text/javascript" src="../index.js"></script>
+        <script type="text/javascript" src="../js/funciones.js"></script>
+        <script type="text/javascript" src="../js/login.js"></script>
+        <script type="text/javascript" src="../js/parameters.js"></script>
+        <script type="text/javascript" src="../js/users.js"></script>
+        <script type="text/javascript" src="../js/complaints.js"></script>
+    </body>
+</html>
+
+
+

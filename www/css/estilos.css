@@ -1,0 +1,79 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11/05/2015, 09:17:04 AM
+    Author     : dhernandez
+*/
+
+.centrado{
+    text-align: center;   
+}
+
+::-webkit-input-placeholder {
+   text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;  
+}
+
+:-ms-input-placeholder {  
+   text-align: center; 
+}
+
+.acceso{    
+    text-decoration: underline  !important;
+    text-align: center  !important;
+}
+
+a:hover{
+color: #333333 !important;
+}
+a:link {color: #333333 !important;}
+a:visited {color: #333333  !important;}
+a:active {color: #333333  !important;}
+
+.fondo{
+    background-color: #878787 !important;
+    color: white !important;
+    font-family: Verdana, Geneva, sans-serif;
+ }
+ 
+ .estiloLetra{
+     color: #333333 !important;
+ }
+ 
+ .noUnderline{
+     text-decoration: none;
+ }
+ 
+ img.alineadoTextoImagen{
+  vertical-align: middle;
+}
+
+label.error {
+    color: red;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.4;
+    margin-top: 0.5em;
+    width: 100%;
+    float: none;
+}
+
+@media screen and (orientation: portrait){
+    label.error { margin-left: 0; display: block; }
+}
+ 
+@media screen and (orientation: landscape){
+    label.error { display: inline-block; margin-left: 22%; }
+}
+ 
+em { color: red; font-weight: bold; padding-right: .25em; }

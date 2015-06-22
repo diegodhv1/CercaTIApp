@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Principal</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <script  src="../cordova.js"></script>
+        <link rel="stylesheet" href="../css/estilos.css">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script
+            src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js">
+        </script>
+    </head>
+    <body onload="onLoad();">
+
+        <div data-role="page" id="principal" >
+
+            <div data-role="header">
+                <table style="width: 100%;">
+                    <tr>
+                        <td><div style="text-align: left;"><h2 >Cerca de TI</h2></div></td>
+                        <td><div  style="text-align: right;"><a href="#add-form" class="ui-btn ui-icon-gear ui-btn-icon-notext  ui-corner-all">Opciones</a></div></td>
+                    </tr>                                                            
+                </table>                                    
+                <div class="ui-grid-solo">
+                    <p id="idNameUserlogin"><img src="../img/avatar.png" class="alineadoTextoImagen" ></p>
+                </div>                
+
+            </div><!-- /header -->            
+
+            <div class="fondo" data-role="footer">
+                <div  data-role="navbar">
+                    <ul><li><a onclick="getUserUpdate();"  data-role="button" data-icon="carat-l" data-transition="slidedown">Inicio</a></li></ul>
+                </div>
+            </div>  
+        </div><!-- /page -->
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="../cordova.js"></script>
+        <script type="text/javascript" src="../index.js"></script>
+        <script type="text/javascript" src="../js/funciones.js"></script>
+        <script type="text/javascript" src="../js/login.js"></script>
+        <script type="text/javascript" src="../js/parameters.js"></script>
+        <script type="text/javascript" src="../js/users.js"></script>
+        <script type="text/javascript" src="../js/complaints.js"></script>
+
+    </body>
+</html>
+
+
+

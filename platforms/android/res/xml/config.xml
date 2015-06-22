@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="co.stackpointer.cercati.mobile.CercaTIApp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <preference name="loglevel" value="DEBUG" />
+    <feature name="LaunchMyApp">
+        <param name="android-package" value="nl.xservices.plugins.LaunchMyApp" />
+    </feature>
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+    </feature>
+    <feature name="Capture">
+        <param name="android-package" value="org.apache.cordova.mediacapture.Capture" />
+    </feature>
+    <feature name="NetworkStatus">
+        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+    </feature>
+    <feature name="FileTransfer">
+        <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
+    </feature>
+    <feature name="PushPlugin">
+        <param name="android-package" value="org.jboss.aerogear.cordova.push.PushPlugin" />
+    </feature>
+    <name>CercaTI</name>
+    <description>
+        Mobile App for Cerca de TI Cartagena Services
+    </description>
+    <author email="info@stackpointer.co" href="http://www.stackpointer.co">
+        StackPointer SAS
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <gap:plugin name="nl.x-services.plugins.launchmyapp">
+        <param name="URL_SCHEME" value="cercati" />
+    </gap:plugin>
+</widget>

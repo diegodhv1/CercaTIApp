@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Principal</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <script type="text/javascript" src="../cordova.js"></script>
+        <link rel="stylesheet" href="../css/estilos.css">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script
+            src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js">
+        </script>
+    </head>
+    <body>
+
+        <div data-role="page" id="seguimiento">
+
+            <div data-role="header">
+                <table style="width: 100%;">
+                    <tr>
+                        <td><div style="text-align: left;"><h2 >Cerca de TI</h2></div></td>
+                        <td><div  style="text-align: right;"><a href="#add-form" class="ui-btn ui-icon-gear ui-btn-icon-notext  ui-corner-all">Opciones</a></div></td>
+                    </tr>                                                            
+                </table>                                    
+                <div class="ui-grid-solo">
+                    <p id="idNameUserlogin"><img src="../img/avatar.png" class="alineadoTextoImagen" ></p>
+                </div>                
+
+            </div><!-- /header -->
+
+            <div role="main"  class="ui-content">
+                <div class="centrado">                    
+                    <h1 class="estiloLetra">Seguimiento de Denuncias/PQR</h1>
+                    <ul id="listComplaints" data-role="listview" data-inset="true">                                 
+                    </ul>                                       
+                </div>
+                <!-- <a href="../index.html" class="ui-btn" data-transition="slidedown">Registro</a> -->
+            </div><!-- /content -->
+
+            <div class="fondo" data-role="footer">
+                <div  data-role="navbar">                    
+                </div>
+            </div>                                   
+            <div data-role="panel" data-position="right" data-display="overlay" data-theme="b" id="add-form">
+                <ul data-role="listview" data-theme="a">
+                    <li data-icon="home"><a onclick="goToPage('principal.html')" data-transition="slidedown">Inicio</a></li>  
+                    <li data-icon="comment"><a onclick="goToPage('denuncias.html')" data-transition="slidedown">Denunciar</a></li>
+                    <li data-icon="search"><a onclick="goToPage('consultas.html')" data-transition="slidedown">Consultar</a></li>
+                    <li data-icon="refresh"><a onclick="goToPage('registro.html')" data-transition="slidedown">Actializar datos</a></li>                    
+                    <li data-icon="action"><a onclick="logoutUser()" data-transition="slidedown">Cerrar sesión</a></li>
+                </ul>
+            </div><!-- /panel -->  
+            
+        </div><!-- /page -->       
+       <script type="text/javascript" src="../js/bootstrap.js"></script>
+        <script type="text/javascript" src="../js/storage.js"></script>
+        <script type="text/javascript" src="../js/login.js"></script>
+        <script type="text/javascript" src="../js/parameters.js"></script>
+        <script type="text/javascript" src="../js/users.js"></script>
+        <script type="text/javascript" src="../js/complaints.js"></script>
+        <script type="text/javascript">
+            function bootstrap(userData){
+                showUserInfo(userData);
+                complaintsCurrent();
+            }
+        </script>
+    </body>
+</html>
+
+
+

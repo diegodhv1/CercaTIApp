@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Consulta</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script
+            src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js">
+        </script>
+    </head>
+    <body>
+
+        <div data-role="page" id="actualizarContrasena">
+
+            <div data-role="header">
+                <table style="width: 100%;">
+                    <tr>
+                        <td><div style="text-align: left;"><h2 >Cerca de TI</h2></div></td>
+                        <td><div  style="text-align: right;"><a href="#add-form" class="ui-btn ui-icon-gear ui-btn-icon-notext  ui-corner-all">Opciones</a></div></td>
+                    </tr>                                                            
+                </table>                                    
+                <div class="ui-grid-solo">
+                    <p id="idNameUserlogin"><img src="../img/avatar.png" class="alineadoTextoImagen" ></p>
+                </div>                
+
+            </div><!-- /header -->
+
+            <div  role="main" class="ui-content">
+                <h1 class="centrado">Cerca de Ti</h1>
+                <form class="ui-filterable">
+                    <input id="rich-autocomplete-input" data-type="search" placeholder="palabra clave">
+                </form>
+                <ul data-role="listview" id="idListViewhistoryComplaints" data-filter="true" data-inset="true" data-input="#rich-autocomplete-input">                                          
+                </ul>               
+            </div><!-- /content -->            
+            <div  data-role="footer">
+                <div  data-role="navbar">
+                    <ul><li><a onclick="goToPage('principal.html')" data-icon="check" data-transition="slidedown">Regresar</a></li></ul>
+                </div>
+            </div>           
+            <div data-role="panel" data-position="right" data-display="overlay" data-theme="b" id="add-form">
+                <ul data-role="listview" data-theme="a">
+                    <li data-icon="home"><a onclick="goToPage('principal.html')" data-transition="slidedown">Inicio</a></li>                    
+                    <li data-icon="grid"><a onclick="goToPage('seguimiento.html')"  data-transition="slidedown">Mis denuncias</a></li>
+                    <li data-icon="search"><a onclick="goToPage('denuncias.html')"  data-transition="slidedown">Denunciar</a></li>                    
+                    <li data-icon="refresh"><a onclick="goToPage('registro.html')" data-transition="slidedown">Actializar datos</a></li>                    
+                    <li data-icon="action"><a onclick="logoutUser()" data-transition="slidedown">Cerrar sesión</a></li>
+                </ul>
+            </div><!-- /panel -->
+        </div><!-- /page -->
+        <script type="text/javascript" src="../js/bootstrap.js"></script>
+        <script type="text/javascript" src="../js/storage.js"></script>
+        <script type="text/javascript" src="../js/login.js"></script>
+        <script type="text/javascript" src="../js/parameters.js"></script>
+        <script type="text/javascript" src="../js/users.js"></script>
+        <script type="text/javascript" src="../js/complaints.js"></script>
+        <script type="text/javascript">
+                        function bootstrap(userData) {
+                            showUserInfo(userData);
+                            historyComplaints()();
+                        }
+        </script>
+    </body>
+</html>
+
+
+
